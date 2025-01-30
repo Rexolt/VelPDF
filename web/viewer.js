@@ -286,3 +286,17 @@ export {
   AppConstants as PDFViewerApplicationConstants,
   AppOptions as PDFViewerApplicationOptions,
 };
+const { dialog } = require('electron');
+
+async function openPDF() {
+  const { filePaths } = await dialog.showOpenDialog({
+    properties: ['openFile'],
+    filters: [{ name: 'PDF Files', extensions: ['pdf'] }]
+  });
+
+  if (filePaths.length > 0) {
+    const pdfViewer = document.getElementById('viewer');
+    pdfViewer.src = filePaths[0]; 
+  }
+}
+

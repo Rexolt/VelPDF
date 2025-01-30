@@ -1,6 +1,6 @@
 {
   "name": "pdf.js",
-  "type": "module",
+  
   "devDependencies": {
     "@babel/core": "^7.26.0",
     "@babel/preset-env": "^7.26.0",
@@ -55,7 +55,9 @@
     "vinyl": "^3.0.0",
     "webpack": "^5.97.1",
     "webpack-stream": "^7.0.0",
-    "yargs": "^17.7.2"
+    "yargs": "^17.7.2",
+    "electron": "^28.1.0"
+
   },
   "repository": {
     "type": "git",
@@ -64,5 +66,11 @@
   "engines": {
     "node": ">=20"
   },
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "main": "main.js",
+"scripts": {
+  "start": "electron ."
 }
+ }
+
+
