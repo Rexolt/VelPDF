@@ -2,7 +2,7 @@
 
 **VelPDF** is a modern, Electron-powered PDF reader that uses Mozilla’s **PDF.js** for rendering. It provides a fast, lightweight, and user-friendly experience for viewing PDFs on Windows, macOS, and Linux.
 
-![VelPDF Screenshot](screenshot.png)
+
 
 ---
 
