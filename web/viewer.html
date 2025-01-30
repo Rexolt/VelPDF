@@ -92,6 +92,7 @@ See https://github.com/adobe-type-tools/cmap-resources
         }
       }
     </script>
+
     <script src="viewer.js" type="module"></script>
 <!--#endif-->
   </head>
@@ -223,8 +224,8 @@ See https://github.com/adobe-type-tools/cmap-resources
                     <span data-l10n-id="pdfjs-zoom-in-button-label">Zoom In</span>
                   </button>
                 </div>
-                <span id="scaleSelectContainer" class="dropdownToolbarButton">
-                  <select id="scaleSelect" title="Zoom" tabindex="0" data-l10n-id="pdfjs-zoom-select">
+                <span id="scaleSelectContainer" class="dropdownToolbarButton" style="border-radius: 20px; ">
+                  <select id="scaleSelect" title="Zoom" tabindex="0" data-l10n-id="pdfjs-zoom-select" style="border-radius: 10px; ">
                     <option id="pageAutoOption" title="" value="auto" selected="selected" data-l10n-id="pdfjs-page-scale-auto">Automatic Zoom</option>
                     <option id="pageActualOption" title="" value="page-actual" data-l10n-id="pdfjs-page-scale-actual">Actual Size</option>
                     <option id="pageFitOption" title="" value="page-fit" data-l10n-id="pdfjs-page-scale-fit">Page Fit</option>
