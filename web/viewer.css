@@ -260,15 +260,7 @@ p {
   font-style: normal;
   font-size: 13px;
 }
-.light { 
-  font-weight: 300;
-}
-.regular { 
-  font-weight: 400;
-}
-.semibold { 
-  font-weight: 600;
-}
+
 
 html,
 body {
