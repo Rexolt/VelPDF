@@ -14,6 +14,8 @@
  */
 
 @import url(pdf_viewer.css);
+@import url(fonts/OpenSans.ttf);
+@import url(fonts/NotoSans-VariableFont.ttf);
 
 :root {
   --dir-factor: 1;
@@ -237,10 +239,42 @@ html {
   }
 }
 
+p {
+  font-family: 'Noto Sans';
+}
+
+
+
+.noto-sans-regular {
+  font-family: "Noto Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+
+* {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-size: 13px;
+}
+.light { 
+  font-weight: 300;
+}
+.regular { 
+  font-weight: 400;
+}
+.semibold { 
+  font-weight: 600;
+}
+
 html,
 body {
   height: 100%;
   width: 100%;
+  font-family: 'Noto Sans';
 }
 
 body {
