@@ -297,6 +297,51 @@ async function openPDF() {
   if (filePaths.length > 0) {
     const pdfViewer = document.getElementById('viewer');
     pdfViewer.src = filePaths[0]; 
+    document.body.classList.add("pdf-loaded");
   }
 }
+const dropArea = document.getElementById("drop-area");
+const fileInput = document.getElementById("file-input");
+const browseBtn = document.getElementById("browse-btn");
+const pdfViewer = document.getElementById("pdf-viewer");
+
+// Handle Drag & Drop
+dropArea.addEventListener("dragover", (e) => {
+    e.preventDefault();
+    dropArea.classList.add("drag-over");
+});
+
+dropArea.addEventListener("dragleave", () => {
+    dropArea.classList.remove("drag-over");
+});
+
+dropArea.addEventListener("drop", (e) => {
+    e.preventDefault();
+    dropArea.classList.remove("drag-over");
+
+    if (e.dataTransfer.files.length > 0) {
+        loadPDF(e.dataTransfer.files[0]);
+    }
+});
+
+// Handle File Selection
+browseBtn.addEventListener("click", () => fileInput.click());
+
+fileInput.addEventListener("change", (e) => {
+    if (e.target.files.length > 0) {
+        loadPDF(e.target.files[0]);
+    }
+});
+
+// Load PDF into viewer
+function loadPDF(file) {
+  const fileURL = URL.createObjectURL(file);
+  pdfViewer.src = `web/viewer.html?file=${fileURL}`;
+  pdfViewer.hidden = false;
+  
+  // Hide background elements
+  dropArea.style.display = "none"; 
+  document.body.classList.add("pdf-loaded"); // Add a class to hide the background
+}
+
 
