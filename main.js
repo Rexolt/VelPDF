@@ -7,6 +7,7 @@ function createWindow() {
     width: 1200,
     height: 800,
     frame: true, 
+    icon: path.join(__dirname, 'assets', 'favicon-96x96.png'),
     webPreferences: {
       preload: path.join(__dirname, "preload.js"), 
       contextIsolation: true,
@@ -21,6 +22,15 @@ app.whenReady().then(() => {
   createWindow();
 });
 
+let tray = null;
+app.whenReady().then(() => {
+  tray = new Tray(path.join(__dirname, 'assets', 'tray-icon.png')); 
+  const contextMenu = Menu.buildFromTemplate([
+    { label: 'Kilépés', role: 'quit' }
+  ]);
+  tray.setToolTip('VelPDF');
+  tray.setContextMenu(contextMenu);
+});
 
 ipcMain.on("minimize-window", (event) => {
   BrowserWindow.getFocusedWindow().minimize();
