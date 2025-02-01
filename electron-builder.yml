@@ -1,0 +1,23 @@
+appId: com.Rexolt.velpdf
+productName: VelPDF
+copyright: "Copyright © 2025 Rexolt"
+directories:
+  output: "dist"
+
+files:
+  - "dist/**/*"
+  - "web/**/*"
+  - "main.js"
+  - "package.json"
+
+win:
+  target: ["nsis", "portable"]
+  icon: "build/icons/icon.ico"
+
+linux:
+  target: ["AppImage", "deb"]
+  icon: "build/icons"
+
+mac:
+  target: ["dmg", "zip"]
+  icon: "build/icons/icon.icns"

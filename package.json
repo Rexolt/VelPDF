@@ -1,6 +1,24 @@
 {
-  "name": "pdf.js",
-  
+  "name": "velpdf",
+  "version": "1.0.0",
+  "description": "A modern Electron-based PDF reader using PDF.js",
+  "author": "Your Name",
+  "license": "Apache-2.0",
+  "main": "main.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Rexolt/VelPDF.git"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder",
+    "dist:win": "electron-builder --win",
+    "dist:linux": "electron-builder --linux",
+    "dist:mac": "electron-builder --mac"
+  },
   "devDependencies": {
     "@babel/core": "^7.26.0",
     "@babel/preset-env": "^7.26.0",
@@ -15,6 +33,8 @@
     "babel-loader": "^9.2.1",
     "caniuse-lite": "^1.0.30001692",
     "core-js": "^3.40.0",
+    "electron": "^28.1.0",
+    "electron-builder": "^25.1.8",
     "eslint": "^9.18.0",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-jasmine": "^4.2.2",
@@ -55,22 +75,6 @@
     "vinyl": "^3.0.0",
     "webpack": "^5.97.1",
     "webpack-stream": "^7.0.0",
-    "yargs": "^17.7.2",
-    "electron": "^28.1.0"
-
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/mozilla/pdf.js.git"
-  },
-  "engines": {
-    "node": ">=20"
-  },
-  "license": "Apache-2.0",
-  "main": "main.js",
-"scripts": {
-  "start": "electron ."
+    "yargs": "^17.7.2"
+  }
 }
- }
-
-
