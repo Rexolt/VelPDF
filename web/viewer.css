@@ -735,7 +735,8 @@ body {
     width: var(--icon-size);
     height: var(--icon-size);
 
-    content: " ";
+    
+    content: "";
     background-color: var(--toolbar-icon-bg-color);
     mask-size: cover;
     mask-image: var(--loading-icon);

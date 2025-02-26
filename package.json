@@ -2,9 +2,10 @@
   "name": "velpdf",
   "version": "1.0.0",
   "description": "A modern Electron-based PDF reader using PDF.js",
-  "author": "Your Name",
+  "author": "Rexolt",
   "license": "Apache-2.0",
   "main": "main.js",
+  "email": "157226862+Rexolt@users.noreply.github.com",
   "repository": {
     "type": "git",
     "url": "https://github.com/Rexolt/VelPDF.git"
