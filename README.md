@@ -63,4 +63,4 @@ The installer files will be generated in the ```dist/``` directory.
 
 ### 📜 License
 
-***This project is licensed under the Apache 2.0 License.***
+### ***This project is licensed under the Apache 2.0 License.***
